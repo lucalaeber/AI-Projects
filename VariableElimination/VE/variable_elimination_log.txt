@@ -1,0 +1,66 @@
+Query: Alarm
+Observed: {'Burglary': 'True'}
+Elimination Order: ['Burglary', 'Earthquake', 'Alarm', 'JohnCalls', 'MaryCalls']
+Factors after applying evidence Burglary=True: [   prob
+0  0.01,   Earthquake  prob
+0       True  0.02
+1      False  0.98,    Alarm Earthquake  prob
+0   True       True  0.95
+1  False       True  0.05
+4   True      False  0.94
+5  False      False  0.06,   JohnCalls  Alarm  prob
+0      True   True  0.90
+1     False   True  0.10
+2      True  False  0.05
+3     False  False  0.95,   MaryCalls  Alarm  prob
+0      True   True  0.70
+1     False   True  0.30
+2      True  False  0.01
+3     False  False  0.99]
+Relevant factors for Earthquake: [  Earthquake  prob
+0       True  0.02
+1      False  0.98,    Alarm Earthquake  prob
+0   True       True  0.95
+1  False       True  0.05
+4   True      False  0.94
+5  False      False  0.06]
+Factor after combining for Earthquake:   Earthquake  Alarm    prob
+0      False   True  0.9212
+1      False  False  0.0588
+2       True   True  0.0190
+3       True  False  0.0010
+Factor after marginalizing Earthquake:    Alarm    prob
+0  False  0.0598
+1   True  0.9402
+Relevant factors for JohnCalls: [  JohnCalls  Alarm  prob
+0      True   True  0.90
+1     False   True  0.10
+2      True  False  0.05
+3     False  False  0.95]
+Factor after combining for JohnCalls:   JohnCalls  Alarm  prob
+0      True   True  0.90
+1     False   True  0.10
+2      True  False  0.05
+3     False  False  0.95
+Factor after marginalizing JohnCalls:    Alarm  prob
+0  False   1.0
+1   True   1.0
+Relevant factors for MaryCalls: [  MaryCalls  Alarm  prob
+0      True   True  0.70
+1     False   True  0.30
+2      True  False  0.01
+3     False  False  0.99]
+Factor after combining for MaryCalls:   MaryCalls  Alarm  prob
+0      True   True  0.70
+1     False   True  0.30
+2      True  False  0.01
+3     False  False  0.99
+Factor after marginalizing MaryCalls:    Alarm  prob
+0  False   1.0
+1   True   1.0
+Final combined factor:    Alarm      prob
+0  False  0.000598
+1   True  0.009402
+Normalized final factor:    Alarm    prob
+0  False  0.0598
+1   True  0.9402
